@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    border-radius: 10px;
+}
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 114, 255, 0.5);
+}
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    box-shadow: 0px 6px 15px rgba(0, 114, 255, 0.7);
+}
+
+/* Glassmorphism Card Design */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-12px);
+}
+
+/* Projects Section */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 60px;
+}
+
+/* Academic & Certifications Tree List */
+.tree {
+    list-style-type: none;
+    padding-left: 25px;
+    font-size: 18px;
+}
+.tree li {
+    position: relative;
+    padding: 12px;
+    font-weight: bold;
+}
+.tree li:before {
+    content: "\25B6";
+    position: absolute;
+    left: -18px;
+    color: #00c6ff;
+    font-size: 20px;
+}
+
+/* Contact Page */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+}
+.contact-info a {
+    color: #00c6ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+/* Reviews Section */
+.review {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+.review:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        padding: 15px;
+    }
+}
